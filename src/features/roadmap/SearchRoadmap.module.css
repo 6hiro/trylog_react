@@ -1,0 +1,12 @@
+.text {
+  font-size: large;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid;
+}
+.seach_button {
+  font-size: large;
+  margin-left: 10px;
+  cursor: pointer;
+  font-weight: bolder;
+}

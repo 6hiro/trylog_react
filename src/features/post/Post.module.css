@@ -1,0 +1,42 @@
+.post {
+  background: #f4f8fb;
+  border-radius: 15px;
+  margin-top: 10px;
+}
+.post .nick_name {
+  padding: 5px 0;
+}
+.post .text {
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  padding: 10px;
+  padding-left: 20px;
+}
+.post .text .hashtag {
+  cursor: pointer;
+  color: blue;
+}
+.post .posted_at {
+  color: rgb(88, 94, 78);
+  padding-right: 10px;
+  text-align: right;
+}
+.post .additional_elements {
+  position: relative;
+  padding: 8px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.post .additional_elements .likes {
+  position: relative;
+  top: 3px;
+  margin-top: 20px;
+  font-size: large;
+  cursor: pointer;
+}
+.post .additional_elements .detail {
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+  cursor: pointer;
+}

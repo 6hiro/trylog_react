@@ -1,0 +1,73 @@
+.container {
+  margin-bottom: 100px;
+  min-height: 100vh;
+}
+.container .navigation {
+  display: flex;
+  justify-content: space-between;
+  color: rgb(88, 94, 78);
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 60px;
+  padding: 10px;
+}
+.container .search_roadmap {
+  text-align: center;
+  /* width: 380px; */
+  margin: 20px auto;
+}
+.container .navigation .user_roadmaps {
+  cursor: pointer;
+}
+.container .navigation .roadmaps {
+  cursor: pointer;
+}
+.container .navigation .is_user_roadmaps {
+  border-bottom: solid;
+  color: blue;
+  border-color: blue;
+}
+.container .roadmap {
+  background: #f4f8fb;
+  border-radius: 15px;
+  width: 360px;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  padding: 10px;
+  padding-bottom: 0;
+  margin: 10px auto;
+}
+.container .roadmap .roadmap_dates {
+  margin: 10px 5px 0 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.container .roadmap .roadmap_overview {
+  padding: 5px;
+  text-indent: 0.5em;
+}
+.container .roadmap .is_own_roadmap {
+  display: flex;
+  justify-content: space-between;
+}
+.container .roadmap_title {
+  color: #23204b;
+  font-size: 20px;
+  font-weight: bolder;
+  padding-bottom: 5px;
+}
+.container .to_steps {
+  margin: auto 0;
+  text-align: right;
+  font-weight: bolder;
+  bottom: 5px;
+  cursor: pointer;
+}
+.container .pagination {
+  width: 360px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  font-weight: bolder;
+}

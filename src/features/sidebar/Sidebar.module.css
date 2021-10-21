@@ -1,0 +1,94 @@
+/* toggle button */
+.toggle {
+  position: fixed;
+  top: 15px;
+  right: 10px;
+  width: 60px;
+  height: 60px;
+  border-radius: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: rgba(0, 0, 255, 0.5); */
+  background: rgba(1, 111, 233, 0.5);
+  /* background: rgba(6, 25, 54, 0.5); */
+  backdrop-filter: blur(5px);
+  box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  font-size: 40px;
+  color: #fbf7f4;
+  z-index: 100;
+}
+.toggle:hover {
+  font-size: 42px;
+}
+.sidebar {
+  width: 250px;
+  position: absolute;
+  position: fixed;
+  left: -250px;
+  top: 0;
+  height: 100%;
+  background: rgba(1, 111, 233, 0.5);
+
+  backdrop-filter: blur(5px);
+  box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.5);
+  transition: 0.5s;
+  z-index: 50;
+}
+.sidebar.active {
+  left: 0px;
+  transition: 0.5s;
+}
+.sidebar .title {
+  padding-left: 18px;
+  font-family: "Libre Baskerville", serif;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 70px;
+  color: #fbf7f4;
+  border-bottom: 2px solid gray;
+  cursor: pointer;
+}
+.sidebar .user {
+  padding-left: 6px;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 70px;
+  color: #fbf7f4;
+  border-bottom: 2px solid gray;
+  cursor: pointer;
+  text-align: right;
+}
+.sidebar .user .follow {
+  margin-top: -15px;
+  color: #fbf7f4;
+  font-size: 16px;
+  text-align: center;
+}
+.sidebar .links ul {
+  margin: 0;
+  padding: 0;
+}
+.sidebar .links li {
+  list-style: none;
+  display: block;
+  width: 100%;
+  line-height: 65px;
+  border-bottom: 1px solid gray;
+  cursor: pointer;
+}
+
+.sidebar .links li .link {
+  text-decoration: none;
+  color: #fbf7f4;
+  font-size: 25px;
+  transition: 0.5s;
+}
+.sidebar .links li:hover .link {
+  color: #0e0e0e;
+  letter-spacing: 1.2px;
+}
+.sidebar .links li .link i {
+  margin-right: 15px;
+}

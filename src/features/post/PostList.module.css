@@ -1,0 +1,29 @@
+.container {
+  margin-top: 90px;
+  margin-bottom: 80px;
+}
+.title {
+  color: #000;
+  text-shadow: 1px 0 5px #fff;
+  font-size: 40px;
+  font-weight: 800;
+  text-align: center;
+  margin: 0 auto;
+  padding: 18px;
+}
+.posts {
+  border-radius: 2%;
+  width: 360px;
+  overflow-wrap: break-word;
+  padding: 8px;
+  margin: 0 auto;
+}
+.search_post {
+  text-align: center;
+}
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  font-weight: bolder;
+}

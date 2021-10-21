@@ -1,0 +1,29 @@
+.auth_title {
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #fdcb5c;
+  text-align: center;
+}
+.auth_error {
+  color: #ff00ff;
+  text-align: center;
+  margin: 10px;
+}
+.auth_regiter {
+  right: 1px;
+}
+.auth_text {
+  text-align: center;
+}
+.auth_button {
+  text-align: right;
+}
+.auth_span {
+  color: rgb(6, 153, 211);
+  cursor: pointer;
+}
+.auth_progress {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}

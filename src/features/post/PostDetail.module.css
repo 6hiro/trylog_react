@@ -1,0 +1,67 @@
+.container {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.post {
+  background: #f4f8fb;
+  border-radius: 15px;
+  width: 360px;
+  overflow-wrap: break-word;
+  padding: 8px;
+  margin: 0 auto;
+}
+.nick_name {
+  padding: 5px 0;
+}
+.text {
+  white-space: pre-wrap;
+  padding: 10px;
+  padding-left: 20px;
+}
+.text .hashtag {
+  cursor: pointer;
+  color: blue;
+}
+.posted_at {
+  color: rgb(88, 94, 78);
+  text-align: right;
+}
+.additional_elements {
+  position: relative;
+  padding-top: 8px;
+}
+.additional_elements .delete_post {
+  position: absolute;
+  right: 10px;
+  bottom: -10px;
+  cursor: pointer;
+  color: red;
+}
+
+.comments {
+  background: #fbf7f4;
+  border-radius: 15px;
+  width: 360px;
+  overflow-wrap: break-word;
+  padding: 8px;
+  margin: 0 auto;
+}
+.comments .comment {
+  padding: 10px;
+}
+.delete_comment {
+  cursor: pointer;
+  text-align: right;
+  color: red;
+}
+.commented_at {
+  padding: 10px;
+  text-align: right;
+}
+.comment_form {
+  background: #fff;
+  width: 360px;
+  overflow-wrap: break-word;
+  padding: 8px;
+  margin: 0 auto;
+}

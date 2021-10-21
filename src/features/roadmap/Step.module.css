@@ -1,0 +1,116 @@
+.container {
+  margin: 0 auto;
+  min-height: 100vh;
+  display: grid;
+  grid-template:
+    /* "header header" 100px */
+    ".... left .... right ...." 1fr
+    /200px 1fr 20px 1fr 200px;
+}
+.container .roadmap {
+  background: #f4f8fb;
+  border-radius: 5%;
+  width: 360px;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  margin: 5px auto;
+}
+.container .roadmap .roadmap_overview {
+  padding: 5px;
+  text-indent: 0.5em;
+}
+.container .roadmap_title {
+  color: #23204b;
+  font-size: 20px;
+  font-weight: bolder;
+  padding-bottom: 5px;
+}
+.container .new_step {
+  grid-area: left;
+  margin-top: 80px;
+}
+.container .new_step .new_step_button {
+  cursor: pointer;
+  color: #fff;
+  border-radius: 5px;
+  margin: 0px auto 10px auto;
+  padding: 5px;
+  width: 360px;
+  background: #1f93eb;
+  text-align: center;
+}
+.container .step_list {
+  grid-area: right;
+  width: 360px;
+  margin: 80px auto;
+}
+.container .step_list .edit {
+  cursor: pointer;
+  color: #fff;
+  border-radius: 5px;
+  margin: 0 5px 10px auto;
+  padding: 5px;
+  width: 120px;
+  background: #1f93eb;
+  text-align: center;
+}
+.container .step_list .down_icon {
+  text-align: center;
+}
+.container .step_list .step {
+  background: #f4f8fb;
+  backdrop-filter: blur(5px);
+  margin: 5px;
+  border-radius: 5%;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+.container .step_list .step .step_header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  padding-bottom: 0;
+}
+.container .step_list .step .step_header .step_order {
+  font-weight: 600;
+}
+.container .step_list .step .step_header .progress {
+  font-weight: 600;
+  /* text-align: right; */
+}
+.container .step_list .step .step_header .progress .left_untouched {
+  color: red;
+}
+.container .step_list .step .step_header .progress .going {
+  color: green;
+}
+.container .step_list .step .step_header .progress .is_completed {
+  color: blue;
+}
+.container .step_list .left_untouched_step {
+  background: #ffd5ec;
+}
+.container .step_list .going_step {
+  background: #cbffd3;
+}
+.container .step_list .step .aditional_elements {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 10px;
+}
+.container .step_list .step .aditional_elements .space {
+  margin: 28px;
+}
+.container .step_list .step .to_learn {
+  margin: 20px;
+  margin-bottom: 0;
+  white-space: pre-wrap;
+}
+@media screen and (max-width: 1000px) {
+  .container {
+    grid-template:
+      "header"
+      "left"
+      "right";
+  }
+}

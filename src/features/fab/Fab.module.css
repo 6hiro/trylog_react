@@ -1,0 +1,61 @@
+.menu {
+  position: fixed;
+  right: 10px;
+  bottom: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(255, 67, 67, 0.5);
+  backdrop-filter: blur(5px);
+  box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  color: #fbf7f4;
+  transition: 0.3s;
+  cursor: pointer;
+  z-index: 100;
+}
+.activate {
+  height: 280px;
+  border-radius: 100px;
+  pointer-events: none;
+}
+.menu .links {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  text-align: center;
+  pointer-events: none;
+}
+.menu .links .link {
+  margin: 6px;
+  transform: scale(0);
+  text-decoration: none;
+  transition: all 0.9s;
+}
+.menu .links i {
+  color: #fbf7f4;
+  pointer-events: all;
+  padding-top: 8px;
+}
+.menu i:hover {
+  color: #0e0e0e;
+  transform: scale(1.1);
+  transition: all 0.3s;
+}
+.activate .links .link {
+  animation: fadeInItem 0.8s forwards;
+}
+@keyframes fadeInItem {
+  70% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.activate .links .link i span {
+  font-size: 20px;
+}

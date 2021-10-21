@@ -1,0 +1,132 @@
+.container {
+  margin: 0 auto;
+  margin-bottom: 80px;
+  min-height: 100vh;
+  display: grid;
+  grid-template:
+    ".... left .... right ...." 1fr
+    /200px 1fr 20px 1fr 200px;
+}
+.container .new_lookback {
+  grid-area: left;
+  margin-top: 80px;
+}
+.container .new_lookback .new_lookback_button {
+  cursor: pointer;
+  color: #fff;
+  border-radius: 5px;
+  margin: 0px auto 10px auto;
+  padding: 5px;
+  /* width: 360px; */
+  background: #1f93eb;
+  text-align: center;
+}
+.title {
+  width: 360px;
+  margin: 20px auto 10px auto;
+  font-weight: 800;
+  color: rgb(88, 94, 78);
+}
+.preview_lookbacks {
+  margin-top: 40px;
+}
+.preview_lookback {
+  background: #d3f5ce;
+  border-radius: 10px;
+  width: 360px;
+  padding: 15px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+}
+.preview_lookback .hidden {
+  max-height: 46px;
+  width: 300px;
+  overflow: hidden;
+}
+.preview_lookback .preview_lookback_content {
+  /* width: 340px; */
+  margin: auto 10px;
+}
+.container .step {
+  background: #f4f8fb;
+  border-radius: 10px;
+  width: 360px;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  padding-right: 8px;
+  padding-left: 8px;
+  margin: 5px auto;
+}
+.container .left_untouched_step {
+  background: #ffd5ec;
+}
+.container .going_step {
+  background: #cbffd3;
+}
+.container .step .progress .left_untouched {
+  color: red;
+}
+.container .step .progress .going {
+  color: green;
+}
+.container .step .progress .is_completed {
+  color: blue;
+}
+.container .step .to_learn {
+  padding: 5px;
+  text-indent: 0.5em;
+}
+.addLookback {
+  grid-area: left;
+  margin-top: 80px;
+}
+.lookbacks {
+  grid-area: right;
+  margin-top: 80px;
+}
+.lookback {
+  background: #f4f8fb;
+  border-radius: 10px;
+  width: 360px;
+  overflow-wrap: break-word;
+  padding: 8px;
+  margin: 10px auto;
+  white-space: pre-wrap;
+}
+.lookback .icon_buttons {
+  text-align: right;
+}
+.lookback .lookback_content {
+  padding: 20px;
+  padding-top: 10px;
+}
+.one_hashtag {
+  font-size: 32px;
+  font-weight: 800;
+}
+.two_hashtag {
+  font-size: 24px;
+  font-weight: 700;
+}
+.three_hashtag {
+  font-size: 18px;
+  font-weight: 700;
+}
+.red {
+  color: red;
+}
+.blue {
+  color: blue;
+}
+.green {
+  color: green;
+}
+/* 1000pxより狭い場合 */
+@media screen and (max-width: 1000px) {
+  .container {
+    grid-template:
+      "left"
+      "right";
+  }
+}

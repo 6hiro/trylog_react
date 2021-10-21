@@ -1,0 +1,21 @@
+.title {
+  color: #000;
+  text-shadow: 1px 0 5px #fff;
+  font-size: 30px;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 80px;
+}
+.posts {
+  border-radius: 2%;
+  width: 360px;
+  overflow-wrap: break-word;
+  padding: 8px;
+  margin: 0 auto;
+}
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  font-weight: bolder;
+}

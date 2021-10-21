@@ -1,0 +1,12 @@
+.title {
+  text-align: center;
+}
+.post_button {
+  display: flex;
+  justify-content: space-between;
+}
+.postProgress {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
