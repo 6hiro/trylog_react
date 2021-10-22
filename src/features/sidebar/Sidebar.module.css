@@ -9,13 +9,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background: rgba(0, 0, 255, 0.5); */
   background: rgba(1, 111, 233, 0.5);
-  /* background: rgba(6, 25, 54, 0.5); */
   backdrop-filter: blur(5px);
   box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.5);
   cursor: pointer;
-  font-size: 40px;
+  font-size: 45px;
   color: #fbf7f4;
   z-index: 100;
 }
@@ -28,9 +26,9 @@
   position: fixed;
   left: -250px;
   top: 0;
-  height: 100%;
+  min-height: 100vh;
+  /* height: 100%; */
   background: rgba(1, 111, 233, 0.5);
-
   backdrop-filter: blur(5px);
   box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.5);
   transition: 0.5s;
@@ -41,9 +39,10 @@
   transition: 0.5s;
 }
 .sidebar .title {
-  padding-left: 18px;
+  padding-left: 25px;
+  /* text-align: center; */
   font-family: "Libre Baskerville", serif;
-  font-size: 32px;
+  font-size: 38px;
   font-weight: bold;
   line-height: 70px;
   color: #fbf7f4;
@@ -73,8 +72,9 @@
 .sidebar .links li {
   list-style: none;
   display: block;
-  width: 100%;
+  width: 105%;
   line-height: 65px;
+  margin-left: -12px;
   border-bottom: 1px solid gray;
   cursor: pointer;
 }
@@ -90,5 +90,6 @@
   letter-spacing: 1.2px;
 }
 .sidebar .links li .link i {
-  margin-right: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
 }

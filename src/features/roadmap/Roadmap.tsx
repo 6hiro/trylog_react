@@ -37,9 +37,13 @@ const useStyles = makeStyles((theme: Theme) =>
     root: {
         display: 'flex',
         '& > *': {
-          margin: theme.spacing(0.8),
+            margin: theme.spacing(0.2),
         },
-    }
+    },
+    small: {
+        width: theme.spacing(2.5),
+        height: theme.spacing(2.5),
+    },
   }),
 );
 
@@ -172,23 +176,34 @@ const Roadmap: React.FC = () => {
             {
                 roadmaps.map((roadmap, index) => ( 
                     <div key={index} className={styles.roadmap}>
-                        <Link 
-                            style={{ textDecoration: 'none', color: 'black', fontSize: '20px', fontWeight: 'bolder'}} 
-                            to={`/prof/${roadmap.challenger}/`}
-                        > 
-                            <div className={classes.root}>
-                                <Avatar alt="who?" src={roadmap.img} />
-                                <div className={styles.nick_name}>{roadmap.nickName}</div>
-                            </div>
-                        </Link>
                         <div className={styles.roadmap_dates}>
+                            {roadmap.createdAt!==roadmap.updatedAt ?
+                                <div>更新：{roadmap.updatedAt}</div>
+                                :
+                                <div></div>
+                            }
                             <div>作成：{roadmap.createdAt}</div>
-                            <div>更新：{roadmap.updatedAt}</div>
+                        </div>
+                        <div className={styles.challenger}>
+                            <div></div>
+                            <Link 
+                                style={{textDecoration: 'none', color: '#575e4e'}}
+                                to={`/prof/${roadmap.challenger}/`}
+                            > 
+                                <div className={classes.root}>
+                                    {/* by */}
+                                    <Avatar alt="who?" src={roadmap.img} className={classes.small}/>
+                                    <div className={styles.nick_name}>{roadmap.nickName}</div>
+                                </div>
+                            </Link>
                         </div>
 
-                        <hr />
+
                         <div　className={styles.roadmap_title}>{roadmap.title}</div>
+
                         <div className={styles.roadmap_overview}>{roadmap.overview}</div>
+
+
                         <div 
                             className={roadmap.challenger === loginId ? 
                                 `${styles.additional_elements}  ${styles.is_own_roadmap}` : `${styles.additional_elements}`}
