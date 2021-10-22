@@ -18,12 +18,12 @@ const Fab : React.FC = () => {
                 <div className={styles.links}>
                     <Link className={styles.link} to={`/post/add/`}>
                         <i className='bx bx-message-detail'>
-                            <span>投稿</span>
+                            <div className={styles.label}>投稿</div>
                         </i>
                     </Link>
                     <Link className={styles.link} to={`/roadmap/add`}>
                         <i className='bx bx-spreadsheet' >
-                            <span>計画</span>
+                            <div className={styles.label}>計画</div>
                         </i>
                     </Link>
                     <i className='bx bx-x'></i>

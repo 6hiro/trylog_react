@@ -80,17 +80,14 @@ const Sidebar: React.FC = () => {
                                 {profile.nickName}
                             </div>
                         </div>
-                        <div className={styles.follow}>
+                        {/* <div className={styles.follow}>
                             <span>
                                 フォロー  {profile.following.length}
                             </span>
-                            &nbsp;
-                            &nbsp;
                             <span>
                                 フォロワー {profile.followers.length}
                             </span>
-                        </div>
-
+                        </div> */}
                     </div>  
                 ):(
                     <div className={styles.title}>

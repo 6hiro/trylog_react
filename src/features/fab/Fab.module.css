@@ -18,7 +18,7 @@
   z-index: 100;
 }
 .activate {
-  height: 280px;
+  height: 250px;
   border-radius: 100px;
   pointer-events: none;
 }
@@ -31,12 +31,13 @@
 }
 .menu .links .link {
   margin: 6px;
-  transform: scale(0);
+  /* transform: scale(0); */
   text-decoration: none;
-  transition: all 0.9s;
+  /* transition: all 0.9s; */
 }
 .menu .links i {
   color: #fbf7f4;
+  font-size: 40px;
   pointer-events: all;
   padding-top: 8px;
 }
@@ -45,12 +46,15 @@
   transform: scale(1.1);
   transition: all 0.3s;
 }
-.activate .links .link {
-  animation: fadeInItem 0.8s forwards;
+.menu i .label {
+  font-size: 18px;
+}
+/* .activate .links .link {
+  animation: fadeInItem 1s forwards;
 }
 @keyframes fadeInItem {
-  70% {
-    transform: scale(1.1);
+  0% {
+    transform: scale(0.8);
   }
   100% {
     transform: scale(1);
@@ -58,4 +62,4 @@
 }
 .activate .links .link i span {
   font-size: 20px;
-}
+} */

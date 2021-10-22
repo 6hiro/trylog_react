@@ -62,8 +62,12 @@
 .sidebar .user .follow {
   margin-top: -15px;
   color: #fbf7f4;
-  font-size: 16px;
-  text-align: center;
+  font-size: 18px;
+  text-align: left;
+  margin-left: 15px;
+}
+.sidebar .user .follow span {
+  padding-right: 15px;
 }
 .sidebar .links ul {
   margin: 0;
