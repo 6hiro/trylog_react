@@ -1,15 +1,20 @@
 .container {
   margin: 0 auto;
   margin-bottom: 80px;
-  min-height: 100vh;
+  min-height: 100%;
   display: grid;
   grid-template:
+    "header header header header header" 40px
     ".... left .... right ...." 1fr
     /200px 1fr 20px 1fr 200px;
 }
+.container .header {
+  grid-area: "header";
+}
 .container .new_lookback {
   grid-area: left;
-  margin-top: 80px;
+  width: 360px;
+  margin: 40px auto 0 auto;
 }
 .container .new_lookback .new_lookback_button {
   cursor: pointer;
@@ -34,24 +39,25 @@
   background: #d3f5ce;
   border-radius: 10px;
   width: 360px;
-  padding: 15px;
+  padding: 15px 0;
   margin: 10px auto;
   display: flex;
   justify-content: space-between;
 }
 .preview_lookback .hidden {
   max-height: 46px;
-  width: 300px;
+  /* width: 300px; */
   overflow: hidden;
 }
 .preview_lookback .preview_lookback_content {
+  padding: 0 15px;
   /* width: 340px; */
   margin: auto 10px;
 }
 .container .step {
   background: #f4f8fb;
   border-radius: 10px;
-  width: 360px;
+  /* width: 360px; */
   white-space: pre-wrap;
   overflow-wrap: break-word;
   padding-right: 8px;
@@ -74,23 +80,20 @@
   color: blue;
 }
 .container .step .to_learn {
-  padding: 5px;
+  padding: 10px;
+  padding-bottom: 20px;
   text-indent: 0.5em;
-}
-.addLookback {
-  grid-area: left;
-  margin-top: 80px;
 }
 .lookbacks {
   grid-area: right;
-  margin-top: 80px;
+  margin-top: 40px;
 }
 .lookback {
   background: #f4f8fb;
   border-radius: 10px;
   width: 360px;
   overflow-wrap: break-word;
-  padding: 8px;
+  /* padding: 8px; */
   margin: 10px auto;
   white-space: pre-wrap;
 }
@@ -126,6 +129,7 @@
 @media screen and (max-width: 1000px) {
   .container {
     grid-template:
+      "header" 40px
       "left"
       "right";
   }

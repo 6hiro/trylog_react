@@ -133,6 +133,8 @@ const Step: React.FC = () => {
     
     return (
         <div className={styles.container}>
+            <div className={styles.header}></div>
+            
             {roadmap.challenger===loginId ?
                 <div className={styles.new_step}>
                     {newStepOpen ? 

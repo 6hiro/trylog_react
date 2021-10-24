@@ -1,6 +1,6 @@
-/* .container {
-  min-height: 100vh;
-} */
+.container {
+  min-height: 100%;
+}
 .container .navigation {
   display: flex;
   justify-content: space-between;

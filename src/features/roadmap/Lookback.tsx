@@ -197,6 +197,7 @@ const Lookback: React.FC = () => {
 
     return (
         <div className={styles.container}>
+            <div className={styles.header}></div>
             <div className={styles.new_lookback}>
                 {step.challenger===loginId ?
                     <>

@@ -1,11 +1,14 @@
 .container {
   margin: 0 auto;
-  min-height: 100vh;
+  min-height: 100%;
   display: grid;
   grid-template:
-    /* "header header" 100px */
+    "header header header header header" 40px
     ".... left .... right ...." 1fr
     /200px 1fr 20px 1fr 200px;
+}
+.container .header {
+  grid-area: "header";
 }
 .container .roadmap {
   background: #f4f8fb;
@@ -27,7 +30,7 @@
 }
 .container .new_step {
   grid-area: left;
-  margin-top: 80px;
+  margin-top: 40px;
 }
 .container .new_step .new_step_button {
   cursor: pointer;
@@ -42,7 +45,7 @@
 .container .step_list {
   grid-area: right;
   width: 360px;
-  margin: 80px auto;
+  margin: 40px auto;
 }
 .container .step_list .edit {
   cursor: pointer;
@@ -109,8 +112,8 @@
 @media screen and (max-width: 1000px) {
   .container {
     grid-template:
-      "header"
-      "left"
+      "header" 40px
+      "left" 1fr
       "right";
   }
 }

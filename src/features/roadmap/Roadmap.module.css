@@ -27,6 +27,9 @@
   color: blue;
   border-color: blue;
 }
+.container {
+  min-height: 100%;
+}
 .container .roadmap {
   background: #f4f8fb;
   border-radius: 15px;
