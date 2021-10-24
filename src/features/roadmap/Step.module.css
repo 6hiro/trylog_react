@@ -10,19 +10,19 @@
 .container .header {
   grid-area: "header";
 }
-.container .roadmap {
+.container .new_step .roadmap {
   background: #f4f8fb;
   border-radius: 5px;
-  width: 360px;
+  /* width: 360px; */
   white-space: pre-wrap;
   overflow-wrap: break-word;
   margin: 5px auto;
 }
-.container .roadmap .roadmap_overview {
+.container .new_step .roadmap .roadmap_overview {
   padding: 10px;
   /* text-indent: 0.5em; */
 }
-.container .roadmap_title {
+.container .new_step .roadmap_title {
   color: #23204b;
   font-size: 20px;
   font-weight: bolder;
@@ -32,14 +32,15 @@
 .container .new_step {
   grid-area: left;
   margin-top: 40px;
+  width: 360px;
+  margin: 5px auto;
 }
 .container .new_step .new_step_button {
   cursor: pointer;
   color: #fff;
   border-radius: 5px;
-  margin: 0px auto 10px auto;
+  margin: 40px auto 10px auto;
   padding: 5px 0;
-  width: 360px;
   background: #1f93eb;
   text-align: center;
 }
