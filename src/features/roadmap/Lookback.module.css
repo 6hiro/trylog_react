@@ -46,7 +46,7 @@
 }
 .preview_lookback .hidden {
   max-height: 46px;
-  /* width: 300px; */
+  width: 200px;
   overflow: hidden;
 }
 .preview_lookback .preview_lookback_content {
