@@ -47,7 +47,7 @@
 }
 .container .roadmap .roadmap_overview {
   padding: 5px 10px;
-  text-indent: 0.5em;
+  /* text-indent: 0.5em; */
 }
 .container .roadmap .is_own_roadmap {
   display: flex;

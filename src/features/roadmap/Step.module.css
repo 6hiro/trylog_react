@@ -17,17 +17,17 @@
   white-space: pre-wrap;
   overflow-wrap: break-word;
   margin: 5px auto;
-  padding: 10px;
 }
 .container .roadmap .roadmap_overview {
-  padding: 5px;
+  padding: 10px;
   /* text-indent: 0.5em; */
 }
 .container .roadmap_title {
   color: #23204b;
   font-size: 20px;
   font-weight: bolder;
-  padding: 0 5px 5px 5px;
+  padding: 10px;
+  padding-bottom: 0;
 }
 .container .new_step {
   grid-area: left;
