@@ -42,6 +42,7 @@ import {
   fetchAsyncGetFavoritePosts,
 } from '../post/postSlice';
 import styles from "./Profile.module.css";
+import EditProf from "../profile/EditProf";
 import FollowProfiles from './FollowProfiles';
 import Post from '../post/Post';
 import ProfilesLikePost from '../post/ProfilesLikePost';
@@ -360,6 +361,7 @@ const Profile: React.FC = () => {
             }
           </div>
 
+        <EditProf userId={loginId} />
 
           {/* フォロワーもしくは、フォローしている人のプロフィール一覧 */}
           <FollowProfiles isFollowing={isFollowing} followingProfiles={followingProfiles}  followerProfiles={followerProfiles}/>

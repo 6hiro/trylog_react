@@ -4,7 +4,7 @@
   min-height: 100%;
   display: grid;
   grid-template:
-    "header header header header header" 40px
+    "header header header header header" 80px
     ".... left .... right ...." 1fr
     /200px 1fr 20px 1fr 200px;
 }
@@ -14,7 +14,7 @@
 .container .new_lookback {
   grid-area: left;
   width: 360px;
-  margin: 40px auto 0 auto;
+  margin: 0 auto 0 auto;
 }
 .container .new_lookback .new_lookback_button {
   cursor: pointer;
@@ -86,7 +86,7 @@
 }
 .lookbacks {
   grid-area: right;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 .lookback {
   background: #f4f8fb;

@@ -13,14 +13,17 @@ import {
   resetOpenProfile,
   fetchCredStart,
   fetchCredEnd,
-  fetchAsyncGetMyProf,
+  // fetchAsyncGetMyProf,
+  // fetchAsyncGetProf,
   fetchAsyncUpdateProf,
   fetchAsyncRefreshToken,
   setOpenLogIn,
   editNickName,
 } from "../auth/authSlice";
 
-
+import {
+  fetchUpdateProf,
+} from "../post/postSlice"
 
 const customStyles = {
   overlay: {
@@ -38,7 +41,7 @@ const customStyles = {
   },
 };
 
-const EditProf: React.FC = () => {
+const EditProf: React.FC<{ userId: string; }> = (props) => {
   const dispatch: AppDispatch = useDispatch();
   const openProfile = useSelector(selectOpenProfile);
   const profile = useSelector(selectMyProfile);
@@ -63,12 +66,16 @@ const EditProf: React.FC = () => {
       if(fetchAsyncUpdateProf.rejected.match(retryResult)){
         dispatch(setOpenLogIn());
       }else if(fetchAsyncUpdateProf.fulfilled.match(retryResult)){
-        await dispatch(fetchAsyncGetMyProf);
+        // await dispatch(fetchAsyncGetMyProf);
+        // await dispatch(fetchAsyncGetProf(props.userId));
+        dispatch(fetchUpdateProf({postedBy: props.userId, nickName: profile.nickName}));
         dispatch(fetchCredEnd());
         dispatch(resetOpenProfile());
       }
     }else if(fetchAsyncUpdateProf.fulfilled.match(result)){
-      await dispatch(fetchAsyncGetMyProf);
+      // await dispatch(fetchAsyncGetMyProf);
+      // await dispatch(fetchAsyncGetProf(props.userId));
+      dispatch(fetchUpdateProf({postedBy: props.userId, nickName: profile.nickName}));
       dispatch(fetchCredEnd());
       dispatch(resetOpenProfile());
     }

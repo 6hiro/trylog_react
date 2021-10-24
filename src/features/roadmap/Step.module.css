@@ -3,7 +3,7 @@
   min-height: 100%;
   display: grid;
   grid-template:
-    "header header header header header" 40px
+    "header header header header header" 80px
     ".... left .... right ...." 1fr
     /200px 1fr 20px 1fr 200px;
 }
@@ -31,7 +31,7 @@
 }
 .container .new_step {
   grid-area: left;
-  margin-top: 40px;
+  /* margin-top: 40px; */
   width: 360px;
   margin: 5px auto;
 }
@@ -39,7 +39,7 @@
   cursor: pointer;
   color: #fff;
   border-radius: 5px;
-  margin: 40px auto 10px auto;
+  margin: 0 auto 10px auto;
   padding: 5px 0;
   background: #1f93eb;
   text-align: center;
@@ -47,7 +47,7 @@
 .container .step_list {
   grid-area: right;
   width: 360px;
-  margin: 40px auto;
+  margin: 20px auto;
 }
 .container .step_list .edit {
   cursor: pointer;

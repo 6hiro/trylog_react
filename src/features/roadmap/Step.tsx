@@ -104,6 +104,14 @@ const Step: React.FC = () => {
             handleClose();
         }
     }
+
+    const [changeStepOrderOpen, setChangeStepOrderOpen] = useState<boolean>(false);
+    const handleClickOpenChangeStepOrder = () => {
+        setChangeStepOrderOpen(true);
+    }
+    const handleCloseChangeStepOrder = () => {
+        setChangeStepOrderOpen(false)
+    }
     const changeStepOrder = async() => {
         const result = await dispatch(fetchAsyncChangeStepOrder({"steps":steps}));
         if(fetchAsyncChangeStepOrder.rejected.match(result)){
@@ -111,7 +119,11 @@ const Step: React.FC = () => {
             const retryResult = await dispatch(fetchAsyncChangeStepOrder({"steps":steps}));
             if(fetchAsyncChangeStepOrder.rejected.match(retryResult)){
                 dispatch(setOpenLogIn);
+            }else if(fetchAsyncChangeStepOrder.fulfilled.match(retryResult)){
+                handleCloseChangeStepOrder();
             }
+        }else if(fetchAsyncChangeStepOrder.fulfilled.match(result)){
+            handleCloseChangeStepOrder();
         }
     }
 
@@ -134,7 +146,7 @@ const Step: React.FC = () => {
     return (
         <div className={styles.container}>
             <div className={styles.header}></div>
-            
+
             {roadmap.challenger===loginId ?
                 <div className={styles.new_step}>
                     {newStepOpen ? 
@@ -173,7 +185,7 @@ const Step: React.FC = () => {
             }
            
             <div className={styles.step_list}>
-                {(roadmap.challenger===loginId&&steps[0]) &&
+                {(roadmap.challenger===loginId&&steps[0]&&changeStepOrderOpen===true) &&
                     <div 
                         className={styles.edit} 
                         onClick={changeStepOrder}
@@ -230,6 +242,7 @@ const Step: React.FC = () => {
                                                     // size="small" 
                                                     onClick={() => {
                                                             dispatch(fetchChangeStepOrder(index));
+                                                            handleClickOpenChangeStepOrder();
                                                         }}
                                                 >
                                                     <ArrowUpwardIcon fontSize="small" />

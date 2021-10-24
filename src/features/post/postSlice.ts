@@ -280,6 +280,11 @@ export const postSlice = createSlice({
     fetchCommentDelete(state, action){
       state.comments = state.comments.filter((comment)=> comment.id !== action.payload)
     },
+    fetchUpdateProf(state, action){
+      state.posts.map((post) =>
+          post.nickName = post.postedBy === action.payload.postedBy ? action.payload.nickName : post.nickName,
+      );
+    }
   },
   extraReducers: (builder) => {
     builder.addCase(fetchAsyncGetPosts.fulfilled, (state, action) => {
@@ -434,6 +439,7 @@ export const {
   resetOpenPost,
   setOpenProfilesLikePost,
   resetOpenProfilesLikePost,
+  fetchUpdateProf,
 } = postSlice.actions;
 
 export const selectIsLoadingPost = (state: RootState) =>  state.post.isLoadingPost;

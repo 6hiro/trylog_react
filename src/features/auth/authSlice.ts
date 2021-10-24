@@ -278,6 +278,7 @@ export const authSlice = createSlice({
     });
     builder.addCase(fetchAsyncUpdateProf.fulfilled, (state, action) => {
       state.myprofile = action.payload;
+      state.profile = action.payload;
     });
     builder.addCase(fetchAsyncGetFollowingProfs.fulfilled, (state, action) => {
       state.followingProfile = action.payload;

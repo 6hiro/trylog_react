@@ -12,7 +12,11 @@ import {
     fetchPostEnd,
     fetchAsyncNewRoadmap,
 } from './roadmapSlice';
-import { selectMyProfile } from '../auth/authSlice';
+import { 
+  selectMyProfile,
+  fetchAsyncRefreshToken,
+  setOpenLogIn
+} from '../auth/authSlice';
 import styles from "./AddRoadmap.module.css";
 
 const AddRoadmap: React.FC = () => {
@@ -33,13 +37,21 @@ const AddRoadmap: React.FC = () => {
           }}
           onSubmit={async (values) => {
             dispatch(fetchPostStart());
-            const postResult = await dispatch(fetchAsyncNewRoadmap(values));
-
-            if (fetchAsyncNewRoadmap.fulfilled.match(postResult)) {
-              await dispatch(fetchPostEnd());
-              history.push(`/roadmap/user/${profile.user}`)
-            }else{
+            const result = await dispatch(fetchAsyncNewRoadmap(values));
+            if (fetchAsyncNewRoadmap.rejected.match(result)) {
+              await dispatch(fetchAsyncRefreshToken());
+              const retryResult = await dispatch(fetchAsyncNewRoadmap(values));
+              if (fetchAsyncNewRoadmap.rejected.match(retryResult)) {
+                dispatch(fetchPostEnd());
+                dispatch(setOpenLogIn);
+              }else if (fetchAsyncNewRoadmap.fulfilled.match(retryResult)) {
+                dispatch(fetchPostEnd);
+                history.push(`/roadmap/user/${profile.user}`)
+                
+              }
+            }else if (fetchAsyncNewRoadmap.fulfilled.match(result)) {
               dispatch(fetchPostEnd());
+              history.push(`/roadmap/user/${profile.user}`)
             }
           }}
           validationSchema={

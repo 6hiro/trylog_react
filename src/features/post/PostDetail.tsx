@@ -138,8 +138,19 @@ const PostDetail: React.FC = () =>{
     };
 
     useEffect(() => {
-        dispatch(fetchAsyncGetPost(id));
+      const func = async () => {
+        const result = await dispatch(fetchAsyncGetPost(id));
         dispatch(fetchAsyncGetComments(id));
+        if(fetchAsyncGetPost.rejected.match(result)){
+          await dispatch(fetchAsyncRefreshToken());
+          const retryResult = await dispatch(fetchAsyncGetPost(id));
+          dispatch(fetchAsyncGetComments(id));
+          if(fetchAsyncGetPost.rejected.match(retryResult)){
+            dispatch(setOpenLogIn())
+          }
+        }
+      }
+      func();
 
     }, [dispatch, id])
 

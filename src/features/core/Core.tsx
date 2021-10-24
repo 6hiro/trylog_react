@@ -9,7 +9,6 @@ import Auth from "../auth/Auth";
 import Home from "./Home";
 import Sidebar from "../sidebar/Sidebar";
 import Fab from "../fab/Fab";
-import EditProf from "../profile/EditProf";
 import Profile from "../profile/Profile"
 import AddPost from "../post/AddPost";
 import PostDetail from "../post/PostDetail";
@@ -29,7 +28,6 @@ const Core: React.FC = () => {
     <div>
       <Router>
         <Auth />
-        <EditProf />
 
         <Sidebar />
         {profile?.user &&  <Fab />}
