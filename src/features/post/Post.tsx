@@ -86,9 +86,9 @@ const Post: React.FC<{
             }else if(value==='&emsp;'){
                 // 全角スペースの要素
                 return <span key={index}>&emsp;</span>
-            // }else if(value.slice(0, 8)==='https://' || value.slice(0, 7)==='http://'){
-            //     // URLの要素
-            //     return <a href={value} key={index}>{value}</a>
+            }else if(value.slice(0, 8)==='https://' || value.slice(0, 7)==='http://'){
+                // URLの要素
+                return <a href={value} key={index}>{value}</a>
             }else{
                 return <span key={index}>{value}</span>
                 // return null

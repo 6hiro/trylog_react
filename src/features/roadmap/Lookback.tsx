@@ -325,6 +325,8 @@ const Lookback: React.FC = () => {
             
             }
             </div>
+            <div className={styles.footer}></div>
+
             <UpdateLookback lookbackId={selectedLookbackId} learned={selectedLookbackLearned} />
             <Dialog
                 open={deleteOpen}
