@@ -92,8 +92,52 @@ const PostDetail: React.FC = () =>{
             }else if(value==='&emsp;'){
               // 全角スペースの要素
               return <span  key={index} >&emsp;</span>
-            // }else if(value.slice(0, 8)==='https://' || value.slice(0, 7)==='http://'){
-            //   return <a href={value} key={index}>{value}</a>
+            }else if(value.slice(0, 8)==='https://' || value.slice(0, 7)==='http://'){
+              if(value.slice(0, 32)==='https://www.youtube.com/watch?v='){
+                if(value.indexOf('&')!==-1){
+                  value=value.split('&')[0]
+                }
+                return <iframe 
+                  id="inline-frame" 
+                  width="320" height="180" 
+                  title="YouTube video player" 
+                  frameBorder="0"
+                  // src={value}
+                  src={`https://www.youtube.com/embed/${value.slice(32)}`}
+                  allowFullScreen
+                  key={index}
+                ></iframe>
+              }else if(value.slice(0, 30)==='https://m.youtube.com/watch?v='){
+                if(value.indexOf('&')!==-1){
+                  value=value.split('&')[0]
+                }
+                return <iframe 
+                  id="inline-frame" 
+                  width="320" height="180" 
+                  title="YouTube video player" 
+                  frameBorder="0"
+                  // src={value}
+                  src={`https://www.youtube.com/embed/${value.slice(30)}`}
+                  allowFullScreen
+                  key={index}
+                ></iframe>
+              }else if(value.slice(0, 17)==='https://youtu.be/'){
+                if(value.indexOf('&')!==-1){
+                  value=value.split('&')[0]
+                }
+                return <iframe 
+                  id="inline-frame" 
+                  width="320" height="180" 
+                  title="YouTube video player" 
+                  frameBorder="0"
+                  // src={value}
+                  src={`https://www.youtube.com/embed/${value.slice(17)}`}
+                  allowFullScreen
+                  key={index}
+                ></iframe>
+              }else{
+                  return <a href={value} key={index}>{value}</a>
+              }
             }else{
               return <span key={index}>{value}</span>
               // return null
