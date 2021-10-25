@@ -87,6 +87,7 @@
 .lookbacks {
   grid-area: right;
   margin-top: 20px;
+  margin-bottom: 40px;
 }
 .lookback {
   background: #f4f8fb;
@@ -129,7 +130,7 @@
 @media screen and (max-width: 1000px) {
   .container {
     grid-template:
-      "header" 40px
+      "header" 80px
       "left"
       "right";
   }
